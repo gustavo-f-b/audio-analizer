@@ -42,10 +42,7 @@ def init_line():
         return(rascunho,)
 
 def update_line(i):
-    try :
-        data = numpy.fromstring(stream.read(BUFFER), dtype=numpy.uint8)
-    except IOError:
-        pass
+    data = numpy.fromstring(stream.read(BUFFER), dtype=numpy.uint8)
     rascunho.set_data(r,data)
     
     return (rascunho,) 
